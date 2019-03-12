@@ -1,0 +1,180 @@
+  {% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>BMI</title>
+    <!-- Required meta tags -->
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- fatman font -->
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+
+
+    
+ <!--    <style type="text/css">
+      #loading, #results{
+        display: none
+      }
+    </style> -->
+
+  </head>
+
+  <body>
+
+
+<!-- navbar -->
+<header>
+  <!-- <div class="container"> -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo ">
+                <div style="font-family: 'Lobster', cursive;">F i t Man</div>
+            </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li  ><a href="/home">ABC of Diet</a></li>
+                      <li><a href="/bmr">Calculate BMR</a></li>
+                      <li class="nav-item active"><a href="/bmi">Calculate BMI</a></li>
+                      <li><a href="/tdee">Calculate TDEE</a></li>
+                      <li><a href="/calorie_chart">Calorie Chart</a></li>
+                      <li><a href="/diet_chart">Create Own Diet Chart</a></li>
+                  </ul>
+        </div>
+    </nav>
+    <!-- </div -->
+</header>
+
+
+<main>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pb-3">Your BMI </h1>
+
+            <form  id="bmi-form">
+
+              <!-- weight -->
+              <div class="form-group">
+                <div class="row">
+                      <div class="container">
+                      <div class="row">
+                                  <input type="text" class="form-control" id="amount" placeholder=" আপনার ওজন " disabled>
+                                <div class="col-sm">
+                                  <input type="number" step="0.01" class="form-control" id="weight" placeholder="কেজি">
+                                </div>
+                          </div>
+                    </div>  
+                </div>     
+              </div>
+                    
+              <!-- height -->
+              <div class="form-group">
+                <div class="row">
+                      <div class="container">
+                      <div class="row">
+                                  <input type="text" class="form-control" id="amount" placeholder="আপনার উচ্চতা " disabled>
+                                <div class="col-sm">
+                                  <input type="number" class="form-control" id="ft" placeholder="ফিট ">
+                                </div>
+                                <div class="col-sm">
+                                   <input type="number" class="form-control" id="inch" placeholder="ইঞ্চি ">
+                                </div>
+                          </div>
+                    </div>  
+                </div>     
+              </div>
+ 
+
+              <div class="form-group">
+                <input type="submit" value="Calculate" class="btn  btn-block btn-danger">
+              </div>
+            </form>
+
+            <!-- loader here -->
+      <!--       <div id="loading">
+              <img src="img/img-loading.gif" alt="Responsive image">
+            </div> -->
+            <!-- Results --> 
+              <div class="container">
+                  <div class="row">
+                      <input type="text" class="form-control" id="res" placeholder="আপনার BMI" disabled>
+                  </div>
+              </div> 
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+
+
+              <!-- footer -->
+
+              <footer class="page-footer">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col l6 s12">
+                              <h5 class="white-text">For More Queries</h5>
+                <p class="grey-text text-lighten-4">
+                 
+                    <span class="row">
+                              <i class="tiny material-icons">near_me</i>  Sabit Mahmud Deepto
+                    </span>
+                    <span class="row">
+                                <i class="tiny material-icons">email</i>    deepto69@gmail.com
+                   </span>
+                    <span class="row">
+                                 <i class="tiny material-icons">phone</i>    01677 421 114
+                   </span>
+                  
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Join Our Fb Group</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!"> FatMan</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 Sabit Mahmud Deepto
+            <a class="grey-text text-lighten-4 right" href="#!">More Health & Nutrition Tips</a>
+        </div>
+    </div>
+</footer>
+
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+
+    <script src="{% static 'js/bmi.js' %}"></script>
+
+  </body>
+</html>

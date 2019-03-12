@@ -1,0 +1,146 @@
+  {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> -->
+
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- fatman font -->
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+      <!-- custom css -->
+     <!-- <link rel="stylesheet" href="css/style.css">  -->
+
+	<meta charset="UTF-8">
+	<title>FitMan</title>
+
+</head>
+<body>
+
+<!-- navbar -->
+<!-- <div class="container"> -->
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo ">
+			<div style="font-family: 'Lobster', cursive;">F i t Man</div>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="nav-item active" ><a href="/home">ABC of Diet</a></li>
+            <li><a href="/bmr">Calculate BMR</a></li>
+            <li><a href="/bmi">Calculate BMI</a></li>
+            <li><a href="/tdee">Calculate TDEE</a></li>
+            <li><a href="/calorie_chart">Calorie Chart</a></li>
+            <li><a href="/diet_chart">Create Own Diet Chart</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- </div> -->
+
+<!-- header -->
+<div class="container">
+    <div class="row ">
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header basic "><h5> ABC of Diet:
+                     স্বাস্থ্যকর  ডায়েট শুরুর পূর্বে যেই প্রাথমিক বিষয় গুলা জানতেই হবে </h5>
+                </div>
+                <div class="collapsible-body">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- body -->
+<div class="container">
+  <div class="row">
+  
+  {% for post in all_post_list %}
+    <!-- 1.BMI -->
+     <div class="col s12 m6 l3">
+      <div class="card">
+        <div class="card-image">
+          <!-- <img src="{% static 'img/bmi.jpg' %}" > -->
+                <img src="{{ post.image.url }}" height="120" width="72" > 
+
+          <!-- <span class="card-title"><b><h3><strong>{{post.title}}</strong></h3></b></span> -->
+          <a class="btn-floating halfway-fab waves-effect waves-light red" href="{% url 'single-post' post.pk %}"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>{{post.title}}</p>
+        </div>
+      </div> 
+    </div>
+
+    {% endfor %}
+    <!-- 2 TDEE-->
+  
+
+
+
+
+  </div>
+</div>
+
+
+
+<!-- footer -->
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">For More Queries</h5>
+                <p class="grey-text text-lighten-4">
+                 
+                    <span class="row">
+                              <i class="tiny material-icons">near_me</i>  Sabit Mahmud Deepto
+                    </span>
+                    <span class="row">
+                                <i class="tiny material-icons">email</i>    deepto69@gmail.com
+                   </span>
+                    <span class="row">
+                                 <i class="tiny material-icons">phone</i>    01677 421 114
+                   </span>
+                  
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Join Our Fb Group</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!"> FatMan</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 Sabit Mahmud Deepto
+            <a class="grey-text text-lighten-4 right" href="#!">More Health & Nutrition Tips</a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- </div> -->
+
+
+	<!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+</html>
